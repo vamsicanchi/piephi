@@ -159,8 +159,8 @@ cython_debug/
 #.idea/
 
 # ocr data
-tessdata/
-paddledata/
+# tessdata/
+# paddledata/
 .traineddata
 
 # model files
