@@ -1,0 +1,80 @@
+-DCMAKE_PREFIX_PATH=/usr/src/apps/proj-9.3.0/
+pdal
+# py2exe
+# wxPython
+# psycopg2
+# auto-py-to-exe
+flask-ligand
+h5py
+pycocotools
+albumentations
+torch
+torchvision
+torchaudio
+tensorboard
+tensorflow
+tensorflow-addons
+tensorflow-datasets
+tensorflow-estimator
+tensorflow-hub
+tensorflow-metadata
+tensorflow_similarity
+keras-tuner
+
+
+def analyze_pdf2(file_absolute_path):
+
+    pprint(file_absolute_path)
+
+    pdf_reader = pypdf.PdfReader(file_absolute_path)
+    pages = pdf_reader.pages
+
+    if not pdf_reader.is_encrypted:
+        for page, page_no in enumerate(pages):
+            pprint(page)
+            page_data  = pdf_reader.pages[page_no]
+
+            if '/Font' in page_data['/Resources']:
+                print("[Info]: Looks like there is text in the PDF, contains:", page_data['/Resources'].keys())
+            elif len(page_data['/Resources'].get('/XObject', {})) != 1:
+                print("[Info]: PDF Contains:", page_data['/Resources'].keys())
+
+    # for obj in x_object:
+    #     obj_ = x_object[obj]
+    #     if obj_['/Subtype'] == '/Image':
+    #         print("[Info]: PDF is image only")
+
+def get_pdf_searchable_pages(file_absolute_path):
+    print(file_absolute_path, "--------------------------------------------")
+
+    searchable_pages     = []
+    non_searchable_pages = []
+    page_num             = 0
+    with open(file_absolute_path, 'rb') as infile:
+        parser = PDFParser(infile)
+        try:
+            document = PDFDocument(parser)
+            if document.is_extractable:
+            
+                for page in PDFPage.get_pages(infile):
+                    page_num += 1
+                    if 'Font' in page.resources.keys():
+                        searchable_pages.append(page_num)
+                    else:
+                        non_searchable_pages.append(page_num)
+            else:
+                print("Password Protection")  
+        except pdfminer.pdfdocument.PDFPasswordIncorrect as e:
+            applog.info( message="PDF is Password Protected - "+file_absolute_path, task="process")
+    if page_num > 0:
+        if len(searchable_pages) == 0:
+            print(f"Document '{file_absolute_path}' has {page_num} page(s). "
+                  f"Complete document is non-searchable")
+        elif len(non_searchable_pages) == 0:
+            print(f"Document '{file_absolute_path}' has {page_num} page(s). "
+                  f"Complete document is searchable")
+        else:
+            print(f"searchable_pages : {searchable_pages}")
+            print(f"non_searchable_pages : {non_searchable_pages}")
+    else:
+        print(f"Not a valid document")

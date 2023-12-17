@@ -1,0 +1,196 @@
+{
+    "root_size": "2.0040 MB",
+    "dirs_size": {
+        "images": "295.9219 KB",
+        "pdf": "1.7150 MB"
+    },
+    "files": [
+        "sample1.png",
+        "sample2.png",
+        "sample3.png",
+        "invoice.pdf",
+        "payslip.pdf",
+        "sample1.pdf",
+        "sample2.pdf",
+        "sample3.pdf",
+        "sample4.pdf"
+    ],
+    "files_metadata": {
+        "sample1.png": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\images\\sample1.png",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\images\\sample1",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\images",
+            "file_name_without_extension": "sample1",
+            "file_name_with_extension": "sample1.png",
+            "file_extension": ".png",
+            "file_size": "116.5508 KB"
+        },
+        "sample2.png": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\images\\sample2.png",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\images\\sample2",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\images",
+            "file_name_without_extension": "sample2",
+            "file_name_with_extension": "sample2.png",
+            "file_extension": ".png",
+            "file_size": "61.5488 KB"
+        },
+        "sample3.png": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\images\\sample3.png",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\images\\sample3",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\images",
+            "file_name_without_extension": "sample3",
+            "file_name_with_extension": "sample3.png",
+            "file_extension": ".png",
+            "file_size": "117.8223 KB"
+        },
+        "invoice.pdf": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\pdf\\invoice.pdf",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\pdf\\invoice",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\pdf",
+            "file_name_without_extension": "invoice",
+            "file_name_with_extension": "invoice.pdf",
+            "file_extension": ".pdf",
+            "file_size": "85.4375 KB",
+            "pdf_metadata": {
+                "encrypted": false,
+                "pages_count": 1,
+                "pages_metadata": [
+                    {
+                        "page_number": 1,
+                        "page_type": "searchable"
+                    }
+                ]
+            }
+        },
+        "payslip.pdf": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\pdf\\payslip.pdf",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\pdf\\payslip",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\pdf",
+            "file_name_without_extension": "payslip",
+            "file_name_with_extension": "payslip.pdf",
+            "file_extension": ".pdf",
+            "file_size": "24.3105 KB",
+            "pdf_metadata": {
+                "encrypted": true,
+                "pages_count": 0,
+                "pages_metadata": []
+            }
+        },
+        "sample1.pdf": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample1.pdf",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample1",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\pdf",
+            "file_name_without_extension": "sample1",
+            "file_name_with_extension": "sample1.pdf",
+            "file_extension": ".pdf",
+            "file_size": "1.0487 MB",
+            "pdf_metadata": {
+                "encrypted": false,
+                "pages_count": 3,
+                "pages_metadata": [
+                    {
+                        "page_number": 1,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 2,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 3,
+                        "page_type": "scanned"
+                    }
+                ]
+            }
+        },
+        "sample2.pdf": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample2.pdf",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample2",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\pdf",
+            "file_name_without_extension": "sample2",
+            "file_name_with_extension": "sample2.pdf",
+            "file_extension": ".pdf",
+            "file_size": "258.2764 KB",
+            "pdf_metadata": {
+                "encrypted": false,
+                "pages_count": 3,
+                "pages_metadata": [
+                    {
+                        "page_number": 1,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 2,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 3,
+                        "page_type": "scanned"
+                    }
+                ]
+            }
+        },
+        "sample3.pdf": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample3.pdf",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample3",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\pdf",
+            "file_name_without_extension": "sample3",
+            "file_name_with_extension": "sample3.pdf",
+            "file_extension": ".pdf",
+            "file_size": "181.3174 KB",
+            "pdf_metadata": {
+                "encrypted": false,
+                "pages_count": 6,
+                "pages_metadata": [
+                    {
+                        "page_number": 1,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 2,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 3,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 4,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 5,
+                        "page_type": "scanned"
+                    },
+                    {
+                        "page_number": 6,
+                        "page_type": "scanned"
+                    }
+                ]
+            }
+        },
+        "sample4.pdf": {
+            "file_absolute_path_with_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample4.pdf",
+            "file_absolute_path_without_extension": "D:\\code\\python\\piephi\\samples\\pdf\\sample4",
+            "file_folder": "D:\\code\\python\\piephi\\samples\\pdf",
+            "file_name_without_extension": "sample4",
+            "file_name_with_extension": "sample4.pdf",
+            "file_extension": ".pdf",
+            "file_size": "132.9189 KB",
+            "pdf_metadata": {
+                "encrypted": false,
+                "pages_count": 2,
+                "pages_metadata": [
+                    {
+                        "page_number": 1,
+                        "page_type": "searchable"
+                    },
+                    {
+                        "page_number": 2,
+                        "page_type": "scanned"
+                    }
+                ]
+            }
+        }
+    }
+}

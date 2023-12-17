@@ -1,0 +1,568 @@
+{
+    "product": {
+        "name"      : "",
+        "version"   : "",
+        "module"    : {
+            "name"      : "",
+            "version"   : ""
+        }
+    },
+    "project": {
+        "name"      : "",
+        "client"    : "",
+        "version"   : ""
+    },
+    "environment": {
+        "development"   : {
+            "platform"          : "windows",
+            "default-device"    : "cpu",
+            "device"            : "gpu"
+        },
+        "validaion"     : {
+            "platform"          : "windows",
+            "default-device"    : "cpu",
+            "device"            : "gpu"
+        },
+        "uat"           : {
+            "platform"          : "windows",
+            "default-device"    : "cpu",
+            "device"            : "gpu"
+        },
+        "production"    : {
+            "platform"          : "windows",
+            "default-device"    : "cpu",
+            "device"            : "gpu"
+        }
+    },
+    "paths": {
+        "searchable_pdf_temp" : "../data/temp/pdf",
+        "text_file_temp"      : "../data/temp/text"
+    },
+    "files": {
+        "image_extensions"       : [".png", ".jpg", ".jpeg", ".tif", ".tiff"],
+        "excel_extensions"       : [],
+        "pdf_extensions"         : [".pdf"],
+        "word_extensions"        : [],
+        "ppt_extensions"         : [],
+        "video_extensions"       : [],
+        "audio_extensions"       : [],
+        "other_extensions"       : [],
+        "allowed_extensions"     : [],
+        "not_allowed_extensions" : []
+    },
+    "opencv": {
+        "window_name"    : "OpenCV_Image",
+        "black_color"    : [0, 0, 0],
+        "white_color"    : [255, 255, 255],
+        "tile_color"     : [255, 0, 0],
+        "bbox_color"     : [0, 255, 0],
+        "alert_color"    : [0, 0, 255],
+        "thickness"      : 6,
+        "tile_thickness" : 6,
+        "bbox_thickness" : 4,
+        "modules": {
+            "grayscale"     : true,
+            "scaling"       : true,
+            "thresholding"  : true,
+            "grayscale1"    : true,
+            "grayscale2"    : true,
+            "grayscale3"    : true,
+            "grayscale4"    : true,
+            "grayscale5"    : true,
+            "grayscale6"    : true,
+            "grayscale7"    : true,
+            "grayscale8"    : true,
+            "grayscale9"    : true,
+            "grayscale10"   : true
+        },
+        "grayscale": {
+
+        },
+        "scaling": {
+            "scale_percent"     : 150,
+            "inter_polation"    : 0
+        },
+        "thresholding": {}
+    },
+    "gdal": {
+
+    },
+    "rasterio": {
+
+    },
+    "gis": {
+
+    },
+    "dl": {
+        "cnn": {
+        
+        },
+        "rcnn": {
+
+        },
+        "fastrcnn": {
+
+        },
+        "fasterrcnn": {
+
+        },
+        "yolov1": {
+
+        },
+        "yolov2": {
+
+        },
+        "yolov3": {
+            "workers"               : 4,
+            "batch_size"            : 8,
+            "image_size"            : 416,
+            "learning_rate"         : 1e-3,
+            "weight_decay"          : 1e-2,
+            "epochs"                : 200,
+            "confidence_threshold"  : 0.6,
+            "mAP_iou_threshold"     : 0.6,
+            "nms_iou_threshold"     : 0.6,
+            "pin_memory"            : true,
+            "load_model"            : true,
+            "save_model"            : true,
+            "scale"                 : 1.1,
+            "box_format"            : "midpoint"
+        },
+        "yolov4": {
+
+        },
+        "yolov5": {
+
+        },
+        "yolov6": {
+
+        },
+        "yolov7": {
+
+        }
+    },
+    "datasets": {
+        "toppotsdam": {
+            "base_dir"                  : "D:/datasets/sgl/toppotsdam",
+            "train_dir"                 : "D:/datasets/sgl/toppotsdam/train",
+            "validation_dir"            : "D:/datasets/sgl/toppotsdam/validation",
+            "test_dir"                  : "D:/datasets/sgl/toppotsdam/test",
+            "inference_dir"             : "D:/datasets/sgl/toppotsdam/inference",
+            "inference_confidence"      : 70,
+            "unseen_dir"                : "D:/datasets/sgl/toppotsdam/unseen",
+            "train_csv"                 : "train.csv",
+            "test_csv"                  : "test.csv",
+            "validation_csv"            : "validation.csv",
+            "inference_csv"             : "inference.csv",
+            "tile_dir"                  : "tiles",
+            "tile_name_format"          : "tile-{}-{}",
+            "classes"                   : ["car"],
+            "save_tiles"                : true,
+            "load_checkpoint_file"      : "bin/models/trained/yolov3/toppotsdam-v4.pth",
+            "save_checkpoint_file"      : "bin/models/trained/yolov3/toppotsdam-v5-epoch-175-mAP-65.pth"
+        }
+    },
+    "tesseract": {     
+        "config_string": {
+            "oem"                       : "1",
+            "psm"                       : "6",
+            "correct_osd"               : false,
+            "language"                  : "eng",
+            "landetect"                 : false,
+            "tessdata_dir"              : "../bin/configuration/tessdata",
+            "char_whitelist"            : "",
+            "char_blacklist"            : "",
+            "preserve_interword_spaces" : true 
+        },
+        "config_data": {
+            "oem"       : "1",
+            "psm"       : "11",
+            "language"  : "eng"
+        },
+        "config_osd": {
+            "center": null,
+            "scale" : 0.5
+        }
+    },
+    "paddle": {
+        "alpha"                   : 1.0, 
+        "benchmark"               : false, 
+        "beta"                    : 1.0, 
+        "cls_batch_num"           : 6, 
+        "cls_image_shape"         : "3, 48, 192", 
+        "cls_model_dir"           : "bin/models/paddledata/whl/cls/ch_ppocr_mobile_v2.0_cls_infer", 
+        "cls_thresh"              : 0.9, 
+        "cpu_threads"             : 10, 
+        "crop_res_save_dir"       : "./output", 
+        "det"                     : true, 
+        "det_algorithm"           : "DB", 
+        "det_box_type"            : "quad", 
+        "det_db_box_thresh"       : 0.6, 
+        "det_db_score_mode"       : "fast", 
+        "det_db_thresh"           : 0.3, 
+        "det_db_unclip_ratio"     : 1.5, 
+        "det_east_cover_thresh"   : 0.1, 
+        "det_east_nms_thresh"     : 0.2, 
+        "det_east_score_thresh"   : 0.8, 
+        "det_limit_side_len"      : 960, 
+        "det_limit_type"          : "max", 
+        "det_model_dir"           : "bin/models/paddledata/whl/det/en/en_PP-OCRv3_det_infer", 
+        "det_pse_box_thresh"      : 0.85, 
+        "det_pse_min_area"        : 16, 
+        "det_pse_scale"           : 1, 
+        "det_pse_thresh"          : 0, 
+        "det_sast_nms_thresh"     : 0.2, 
+        "det_sast_score_thresh"   : 0.5, 
+        "draw_img_save_dir"       : "./inference_results", 
+        "drop_score"              : 0.5, 
+        "e2e_algorithm"           : "PGNet", 
+        "e2e_char_dict_path"      : "./ppocr/utils/ic15_dict.txt", 
+        "e2e_limit_side_len"      : 768, 
+        "e2e_limit_type"          : "max", 
+        "e2e_model_dir"           : null, 
+        "e2e_pgnet_mode"          : "fast", 
+        "e2e_pgnet_score_thresh"  : 0.5, 
+        "e2e_pgnet_valid_set"     : "totaltext", 
+        "enable_mkldnn"           : false,
+        "fourier_degree"          : 5, 
+        "gpu_mem"                 : 500, 
+        "help"                    : "==SUPPRESS==", 
+        "image_dir"               : null, 
+        "image_orientation"       : false, 
+        "ir_optim"                : true, 
+        "kie_algorithm"           : "LayoutXLM", 
+        "label_list"              : ["0", "180"], 
+        "lang"                    : "en", 
+        "layout"                  : true, 
+        "layout_dict_path"        : null, 
+        "layout_model_dir"        : null, 
+        "layout_nms_threshold"    : 0.5, 
+        "layout_score_threshold"  : 0.5, 
+        "max_batch_size"          : 10, 
+        "max_text_length"         : 25, 
+        "merge_no_span_structure" : true, 
+        "min_subgraph_size"       : 15, 
+        "mode"                    : "structure", 
+        "ocr"                     : true, 
+        "ocr_order_method"        : null, 
+        "ocr_version"             : "PP-OCRv3", 
+        "output"                  : "./output", 
+        "page_num"                : 0, 
+        "precision"               : "fp32", 
+        "process_id"              : 0, 
+        "re_model_dir"            : null, 
+        "rec"                     : true, 
+        "rec_algorithm"           : "SVTR_LCNet", 
+        "rec_batch_num"           : 6, 
+        "rec_char_dict_path"      : "D:\\programs\\python38\\piephi\\lib\\site-packages\\paddleocr\\ppocr\\utils\\en_dict.txt", 
+        "rec_image_inverse"       : true, 
+        "rec_image_shape"         : "3, 48, 320", 
+        "rec_model_dir"           : "bin/models/paddledata/whl/rec/en/en_PP-OCRv3_rec_infer", 
+        "recovery"                : false, 
+        "save_crop_res"           : false, 
+        "save_log_path"           : "./log_output/", 
+        "scales"                  : [8, 16, 32], 
+        "ser_dict_path"           : "../train_data/XFUND/class_list_xfun.txt", 
+        "ser_model_dir"           : null, 
+        "show_log"                : true, 
+        "sr_batch_num"            : 1, 
+        "sr_image_shape"          : "3, 32, 128", 
+        "sr_model_dir"            : null, 
+        "structure_version"       : "PP-StructureV2", 
+        "table"                   : true, 
+        "table_algorithm"         : "TableAttn", 
+        "table_char_dict_path"    : null, 
+        "table_max_len"           : 488, 
+        "table_model_dir"         : null, 
+        "total_process_num"       : 1, 
+        "type"                    : "ocr", 
+        "use_angle_cls"           : true, 
+        "use_dilation"            : false, 
+        "use_gpu"                 : false, 
+        "use_mp"                  : false, 
+        "use_npu"                 : false, 
+        "use_onnx"                : false, 
+        "use_pdf2docx_api"        : false,
+        "use_pdserving"           : false, 
+        "use_space_char"          : true, 
+        "use_tensorrt"            : false, 
+        "use_visual_backbone"     : true, 
+        "use_xpu"                 : false, 
+        "vis_font_path"           : "bin/models/paddledata/simfang.ttf", 
+        "warmup"                  : false
+    },
+    "easyocr": {
+        "reader": {
+            "lang_list"               : ["ch_sim","en"],
+            "gpu"                     : true,
+            "model_storage_directory" : "bin/models/easyocr",
+            "download_enabled "       : true,
+            "user_network_directory"  : null,
+            "recog_network"           : "standard",
+            "detector"                : true,
+            "recognizer"              : true
+        },
+        "readtext": {
+            "general": {
+                "decoder"       : "",
+                "beamWidth"     : "",
+                "batch_size"    : "",
+                "workers"       : "",
+                "allowlist"     : "",
+                "blocklist"     : "",
+                "detail"        : "",
+                "paragraph"     : "",
+                "min_size"      : "",
+                "rotation_info" : ""
+            },
+            "contrast": {
+                "contrast_ths"    : "",
+                "adjust_contrast" : ""
+            },
+            "text_detection": {
+                "text_threshold"  : "",
+                "low_text"        : "",
+                "link_threshold"  : "",
+                "canvas_size"     : "",
+                "mag_ratio"       : ""
+            },
+            "bounding_box_merging": {
+                "slope_ths"       : "",
+                "ycenter_ths"     : "",
+                "height_ths"      : "",
+                "width_ths"       : "",
+                "x_ths"           : "",
+                "y_ths"           : ""
+            }
+        },
+        "detect": {
+            "min_size"          : "",
+            "text_threshold"    : "",
+            "low_text"          : "",
+            "link_threshold"    : "",
+            "canvas_size"       : "",
+            "mag_ratio"         : "",
+            "slope_ths"         : "",
+            "ycenter_ths"       : "",
+            "height_ths"        : "",
+            "width_ths"         : "",
+            "add_margin"        : "",
+            "optimal_num_chars" : ""
+        },
+        "recognize": {
+            "horizontal_list"   : "",
+            "free_list"         : "",
+            "decoder"           : "",
+            "beamWidth"         : "",
+            "batch_size"        : "",
+            "workers"           : "",
+            "allowlist"         : "",
+            "blocklist"         : "",
+            "detail"            : "",
+            "paragraph"         : "",
+            "contrast_ths"      : "",
+            "adjust_contrast"   : ""
+        }
+    },
+    "extraction": {
+        "camelot": {
+        },
+        "ocrmypdf": {
+            "language"              : null, 
+            "image_dpi"             : 300, 
+            "output_type"           : null, 
+            "sidecar"               : null, 
+            "jobs"                  : null, 
+            "use_threads"           : null, 
+            "title"                 : null, 
+            "author"                : null, 
+            "subject"               : null, 
+            "keywords"              : null, 
+            "rotate_pages"          : null, 
+            "remove_background"     : null, 
+            "deskew"                : true, 
+            "clean"                 : null, 
+            "clean_final"           : null, 
+            "unpaper_args"          : null, 
+            "oversample"            : null, 
+            "remove_vectors"        : null, 
+            "threshold"             : null, 
+            "force_ocr"             : null, 
+            "skip_text"             : null, 
+            "redo_ocr"              : null, 
+            "skip_big"              : null, 
+            "optimize"              : null, 
+            "jpg_quality"           : null, 
+            "png_quality"           : null, 
+            "jbig2_lossy"           : null, 
+            "jbig2_page_group_size" : null, 
+            "pages"                 : null, 
+            "max_image_mpixels"     : null, 
+            "tesseract_config"      : null, 
+            "tesseract_pagesegmode" : null, 
+            "tesseract_oem"         : null, 
+            "pdf_renderer"          : null, 
+            "tesseract_timeout"     : null, 
+            "rotate_pages_threshold": null, 
+            "pdfa_image_compression": null, 
+            "user_words"            : null, 
+            "user_patterns"         : null, 
+            "fast_web_view"         : null, 
+            "plugins"               : null, 
+            "plugin_manager"        : null, 
+            "keep_temporary_files"  : null, 
+            "progress_bar"          : null
+        },
+        "pdfplumber": {
+            "extract_text": {
+                "x_tolerance"   : 3,
+                "y_tolerance"   : 3,
+                "layout"        : false,
+                "x_density"     : 7.25,
+                "y_density"     : 13
+            },
+            "extract_text_simple": {
+                "x_tolerance"   : 3,
+                "y_tolerance"   : 3
+            },
+            "extract_words": {
+                "x_tolerance"           : 3,
+                "y_tolerance"           : 3,
+                "keep_blank_chars"      : false,
+                "use_text_flow"         : false,
+                "horizontal_ltr"        : true,
+                "vertical_ttb"          : true,
+                "extra_attrs"           : [],
+                "split_at_punctuation"  : false,
+                "expand_ligatures"      : true
+            },
+            "extract_text_lines": {
+                "layout"        : false,
+                "strip"         : true,
+                "return_chars"  : true
+            },
+            "search": {
+                "pattern"       : "",
+                "regex"         : true,
+                "case"          : true,
+                "main_group"    : 0,
+                "return_groups" : true,
+                "return_chars"  : true,
+                "layout"        : false
+            },
+            "dedup_chars": {
+                "tolerance": 1
+            },
+            "find_tables": {
+                "vertical_strategy"         : "lines", 
+                "horizontal_strategy"       : "lines",
+                "explicit_vertical_lines"   : [],
+                "explicit_horizontal_lines" : [],
+                "snap_tolerance"            : 3,
+                "snap_x_tolerance"          : 3,
+                "snap_y_tolerance"          : 3,
+                "join_tolerance"            : 3,
+                "join_x_tolerance"          : 3,
+                "join_y_tolerance"          : 3,
+                "edge_min_length"           : 3,
+                "min_words_vertical"        : 3,
+                "min_words_horizontal"      : 1,
+                "text_tolerance"            : 3,
+                "text_x_tolerance"          : 3,
+                "text_y_tolerance"          : 3,
+                "intersection_tolerance"    : 3,
+                "intersection_x_tolerance"  : 3,
+                "intersection_y_tolerance"  : 3
+            },
+            "find_table": {
+                "vertical_strategy"         : "lines", 
+                "horizontal_strategy"       : "lines",
+                "explicit_vertical_lines"   : [],
+                "explicit_horizontal_lines" : [],
+                "snap_tolerance"            : 3,
+                "snap_x_tolerance"          : 3,
+                "snap_y_tolerance"          : 3,
+                "join_tolerance"            : 3,
+                "join_x_tolerance"          : 3,
+                "join_y_tolerance"          : 3,
+                "edge_min_length"           : 3,
+                "min_words_vertical"        : 3,
+                "min_words_horizontal"      : 1,
+                "text_tolerance"            : 3,
+                "text_x_tolerance"          : 3,
+                "text_y_tolerance"          : 3,
+                "intersection_tolerance"    : 3,
+                "intersection_x_tolerance"  : 3,
+                "intersection_y_tolerance"  : 3
+            },
+            "extract_tables": {
+                "vertical_strategy"         : "lines", 
+                "horizontal_strategy"       : "lines",
+                "explicit_vertical_lines"   : [],
+                "explicit_horizontal_lines" : [],
+                "snap_tolerance"            : 3,
+                "snap_x_tolerance"          : 3,
+                "snap_y_tolerance"          : 3,
+                "join_tolerance"            : 3,
+                "join_x_tolerance"          : 3,
+                "join_y_tolerance"          : 3,
+                "edge_min_length"           : 3,
+                "min_words_vertical"        : 3,
+                "min_words_horizontal"      : 1,
+                "text_tolerance"            : 3,
+                "text_x_tolerance"          : 3,
+                "text_y_tolerance"          : 3,
+                "intersection_tolerance"    : 3,
+                "intersection_x_tolerance"  : 3,
+                "intersection_y_tolerance"  : 3
+            },
+            "extract_table": {
+                "vertical_strategy"         : "lines", 
+                "horizontal_strategy"       : "lines",
+                "explicit_vertical_lines"   : [],
+                "explicit_horizontal_lines" : [],
+                "snap_tolerance"            : 3,
+                "snap_x_tolerance"          : 3,
+                "snap_y_tolerance"          : 3,
+                "join_tolerance"            : 3,
+                "join_x_tolerance"          : 3,
+                "join_y_tolerance"          : 3,
+                "edge_min_length"           : 3,
+                "min_words_vertical"        : 3,
+                "min_words_horizontal"      : 1,
+                "text_tolerance"            : 3,
+                "text_x_tolerance"          : 3,
+                "text_y_tolerance"          : 3,
+                "intersection_tolerance"    : 3,
+                "intersection_x_tolerance"  : 3,
+                "intersection_y_tolerance"  : 3
+            },
+            "debug_table": {
+                "vertical_strategy"         : "lines", 
+                "horizontal_strategy"       : "lines",
+                "explicit_vertical_lines"   : [],
+                "explicit_horizontal_lines" : [],
+                "snap_tolerance"            : 3,
+                "snap_x_tolerance"          : 3,
+                "snap_y_tolerance"          : 3,
+                "join_tolerance"            : 3,
+                "join_x_tolerance"          : 3,
+                "join_y_tolerance"          : 3,
+                "edge_min_length"           : 3,
+                "min_words_vertical"        : 3,
+                "min_words_horizontal"      : 1,
+                "text_tolerance"            : 3,
+                "text_x_tolerance"          : 3,
+                "text_y_tolerance"          : 3,
+                "intersection_tolerance"    : 3,
+                "intersection_x_tolerance"  : 3,
+                "intersection_y_tolerance"  : 3
+            }
+        },
+        "pymupdf": {
+            
+        }
+    },
+    "classification": {
+    }
+}
